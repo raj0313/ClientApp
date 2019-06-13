@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import {BrowserRouter,Route,Switch} from 'react-router-dom'
 import Header from './Header'
 import ProjectsList from './ProjectList';
+import NewProject from './NewProject'
 
 class App extends Component{
     render(){
@@ -12,7 +13,8 @@ class App extends Component{
                     <Header/>
                     <Switch>
                         <Route exact path='/' component={ProjectsList}></Route>
-                    </Switch>
+                        <Route exact path='/create' component={NewProject}></Route>
+                   </Switch>
                 </div>
             
             </BrowserRouter>

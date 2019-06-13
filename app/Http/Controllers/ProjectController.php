@@ -20,4 +20,26 @@ class ProjectController extends Controller
         ])->get();
         return $projects->toJson();
     }
-}
+    public function store(Request $request)
+    {
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'description'=> 'required',
+        ]);
+        $project = Project::create([
+            'name' => $validatedData['name'],
+            'description'=> $validatedData['description']
+        ]);
+        return response()->json('Project created!');
+    }
+    public function show($id)
+    {
+        $project = Project::with(['tasks' => function($query)
+        {
+            $query->where('is_completed', false);
+        }])->find($id);
+        return $project->toJson();
+    }
+}  
+
+
