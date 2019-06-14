@@ -4,19 +4,26 @@ import {BrowserRouter,Route,Switch} from 'react-router-dom'
 import Header from './Header'
 import ProjectsList from './ProjectList';
 import NewProject from './NewProject'
+import Footer from './Footer'
+import Home from './Home'
+
+
 
 class App extends Component{
     render(){
         return(
             <BrowserRouter>
-                <div>
+                 
                     <Header/>
+                   
+                                  
                     <Switch>
                         <Route exact path='/' component={ProjectsList}></Route>
                         <Route exact path='/create' component={NewProject}></Route>
                    </Switch>
-                </div>
-            
+                   <Home/>
+                 <Footer/>
+              
             </BrowserRouter>
         )
     }

@@ -7,6 +7,9 @@ constructor(props){
     this.state = {
         project :{},
         tasks : []
+        }
     }
-}
+
+    
+
 }
