@@ -65782,7 +65782,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var Header = function Header() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-    "class": "navbar navbar-expand-lg navbar-light bg-dark"
+    "class": "navbar navbar-expand-lg navbar-light bg-black"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     "class": "navbar-toggler",
     type: "button",
