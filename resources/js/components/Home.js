@@ -22,6 +22,12 @@ class Home extends React.Component {
     const { projects } = this.state
     return (           
         <div class="container">
+              <div class="row pt-20">
+              Limousine Hire Auckland and Chauffeur Driven Services
+              Limousine hire Auckland for all occasions, limo for hire, wedding limos, school ball limos, airport transfer, birthday limos, hens limo, Auckland limos, hummer for hire, hummer limos, limousine service, wedding car hire, luxury limos, bridle cars.
+              Excellent Limousines aims to provide a high quality limousine services for all types of journeys. Weather is it a limousine hire or hummer hire. Our chauffeurs have been transferring clients in our limousines for many years. In this time we have gained a good reputation for courteous and efficient limousine transportation services. A loyal following of regular customers has been the result of our conscientious approach to customer satisfaction. With their support, this has been the foundation in building a solid business, in which we take great pride.
+            Services:
+              </div>
                     <div class="row">
                         <div class="col-sm-3">
                         <div className = "card" >

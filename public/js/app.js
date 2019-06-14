@@ -65673,7 +65673,11 @@ function (_Component) {
   _createClass(App, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Header__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          backgroundColor: "black"
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Header__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
         exact: true,
         path: "/",
         component: _ProjectList__WEBPACK_IMPORTED_MODULE_4__["default"]
@@ -65681,7 +65685,7 @@ function (_Component) {
         exact: true,
         path: "/create",
         component: _NewProject__WEBPACK_IMPORTED_MODULE_5__["default"]
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Home__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Footer__WEBPACK_IMPORTED_MODULE_6__["default"], null));
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Home__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Footer__WEBPACK_IMPORTED_MODULE_6__["default"], null)));
     }
   }]);
 
@@ -65748,9 +65752,7 @@ function (_React$Component) {
   _createClass(Footer, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        style: style
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
         "class": "navbar navbar-expand-lg navbar-light bg-dark"
       }));
     }
@@ -65794,11 +65796,11 @@ var Header = function Header() {
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     "class": "navbar-brand",
     href: "#"
-  }, "Navbar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Excellent Limousine"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     "class": "collapse navbar-collapse",
     id: "navbarMenuMobile"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    "class": "navbar-nav mr-auto mt-2 mt-lg-0"
+    "class": "navbar-nav mr-auto mt-20 mt-lg-0"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     "class": "nav-item active"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -65809,12 +65811,27 @@ var Header = function Header() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     "class": "nav-link",
     href: "#"
-  }, "Link")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, "Services")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     "class": "nav-item"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    "class": "nav-link disabled",
+    "class": "nav-link",
     href: "#"
-  }, "Disabled")))));
+  }, "Our Fleet")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    "class": "nav-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    "class": "nav-link",
+    href: "#"
+  }, "Book Us")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    "class": "nav-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    "class": "nav-link",
+    href: "#"
+  }, "About Us")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    "class": "nav-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    "class": "nav-link",
+    href: "#"
+  }, "Contact Us")))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
@@ -65892,6 +65909,8 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         "class": "container"
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        "class": "row pt-20"
+      }, "Limousine Hire Auckland and Chauffeur Driven Services Limousine hire Auckland for all occasions, limo for hire, wedding limos, school ball limos, airport transfer, birthday limos, hens limo, Auckland limos, hummer for hire, hummer limos, limousine service, wedding car hire, luxury limos, bridle cars. Excellent Limousines aims to provide a high quality limousine services for all types of journeys. Weather is it a limousine hire or hummer hire. Our chauffeurs have been transferring clients in our limousines for many years. In this time we have gained a good reputation for courteous and efficient limousine transportation services. A loyal following of regular customers has been the result of our conscientious approach to customer satisfaction. With their support, this has been the foundation in building a solid business, in which we take great pride. Services:"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         "class": "row"
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         "class": "col-sm-3"

@@ -8,15 +8,12 @@ import Footer from './Footer'
 import Home from './Home'
 
 
-
 class App extends Component{
     render(){
         return(
+            <div style={{backgroundColor:"black"}}>
             <BrowserRouter>
-                 
-                    <Header/>
-                   
-                                  
+                 <Header/>
                     <Switch>
                         <Route exact path='/' component={ProjectsList}></Route>
                         <Route exact path='/create' component={NewProject}></Route>
@@ -25,6 +22,7 @@ class App extends Component{
                  <Footer/>
               
             </BrowserRouter>
+            </div>
         )
     }
 }

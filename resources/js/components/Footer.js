@@ -15,7 +15,7 @@ class Footer extends React.Component{
   
   {
       return(
-            <div style = {style}>
+            <div>
                  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
                 
                 </nav>
