@@ -60648,7 +60648,7 @@ if (false) {} else {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -65632,6 +65632,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _NewProject__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./NewProject */ "./resources/js/components/NewProject.js");
 /* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Footer */ "./resources/js/components/Footer.js");
 /* harmony import */ var _Home__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Home */ "./resources/js/components/Home.js");
+/* harmony import */ var _Gallery__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Gallery */ "./resources/js/components/Gallery.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -65659,6 +65660,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var App =
 /*#__PURE__*/
 function (_Component) {
@@ -65673,11 +65675,7 @@ function (_Component) {
   _createClass(App, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        style: {
-          backgroundColor: "black"
-        }
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Header__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Header__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
         exact: true,
         path: "/",
         component: _ProjectList__WEBPACK_IMPORTED_MODULE_4__["default"]
@@ -65685,7 +65683,11 @@ function (_Component) {
         exact: true,
         path: "/create",
         component: _NewProject__WEBPACK_IMPORTED_MODULE_5__["default"]
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Home__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Footer__WEBPACK_IMPORTED_MODULE_6__["default"], null)));
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+        exact: true,
+        path: "/create",
+        component: _NewProject__WEBPACK_IMPORTED_MODULE_5__["default"]
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Home__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Gallery__WEBPACK_IMPORTED_MODULE_8__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Footer__WEBPACK_IMPORTED_MODULE_6__["default"], null));
     }
   }]);
 
@@ -65752,9 +65754,11 @@ function (_React$Component) {
   _createClass(Footer, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-        "class": "navbar navbar-expand-lg navbar-light bg-dark"
-      }));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          style: style
+        }
+      }, "height");
     }
   }]);
 
@@ -65762,6 +65766,135 @@ function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (Footer);
+
+/***/ }),
+
+/***/ "./resources/js/components/Gallery.js":
+/*!********************************************!*\
+  !*** ./resources/js/components/Gallery.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+var Gallery =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Gallery, _React$Component);
+
+  function Gallery() {
+    var _this;
+
+    _classCallCheck(this, Gallery);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Gallery).call(this));
+    _this.state = {
+      gallery_images: []
+    };
+    return _this;
+  }
+
+  _createClass(Gallery, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/projects').then(function (response) {
+        _this2.setState({
+          projects: response.data
+        });
+      });
+      this.setState({
+        gallery_images: [{
+          "url": "http://localhost:8000/img/limo_3.png",
+          "category": "Ford_limo"
+        }, {
+          "url": "http://localhost:8000/img/limo_1.png",
+          "category": "Hummer_limo"
+        }, {
+          "url": "http://localhost:8000/img/limousine.png",
+          "category": "Other"
+        }, {
+          "url": "http://localhost:8000/img/hummer.png",
+          "category": "Hummer_limo"
+        }, {
+          "url": "http://localhost:8000/img/limo_3.png",
+          "category": "Hummer_limo"
+        }]
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      console.log(this.state.gallery_images);
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "container w-50 h-100 "
+      }, this.state.gallery_images.map(function (val, index) {
+        return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+          className: "row"
+        }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+          className: "col"
+        }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+          className: "img-fluid",
+          src: val.url,
+          alt: "Card Image"
+        }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+          className: "row"
+        }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+          className: "col"
+        }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+          className: "card-img-top",
+          src: val.url,
+          alt: "Card Image"
+        })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+          className: "col"
+        }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+          className: "card-img-top",
+          src: val.url,
+          alt: "Card Image"
+        })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+          className: "col"
+        }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+          className: "card-img-top",
+          src: val.url,
+          alt: "Card Image"
+        })))));
+      }));
+    }
+  }]);
+
+  return Gallery;
+}(react__WEBPACK_IMPORTED_MODULE_1___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (Gallery);
 
 /***/ }),
 
@@ -65782,7 +65915,11 @@ __webpack_require__.r(__webpack_exports__);
 
 var Header = function Header() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-    "class": "navbar navbar-expand-lg navbar-light bg-black"
+    "class": "navbar navbar-expand-lg navbar-inverse ",
+    style: {
+      "background-color": "black",
+      marginBottom: 2
+    }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     "class": "navbar-toggler",
     type: "button",
@@ -65796,7 +65933,10 @@ var Header = function Header() {
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     "class": "navbar-brand",
     href: "#"
-  }, "Excellent Limousine"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "http://localhost:8000/img/logo.png",
+    className: "w-75"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     "class": "collapse navbar-collapse",
     id: "navbarMenuMobile"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
@@ -65816,7 +65956,7 @@ var Header = function Header() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     "class": "nav-link",
     href: "#"
-  }, "Our Fleet")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, "Ours Fleet")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     "class": "nav-item"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     "class": "nav-link",
@@ -65910,7 +66050,7 @@ function (_React$Component) {
         "class": "container"
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         "class": "row pt-20"
-      }, "Limousine Hire Auckland and Chauffeur Driven Services Limousine hire Auckland for all occasions, limo for hire, wedding limos, school ball limos, airport transfer, birthday limos, hens limo, Auckland limos, hummer for hire, hummer limos, limousine service, wedding car hire, luxury limos, bridle cars. Excellent Limousines aims to provide a high quality limousine services for all types of journeys. Weather is it a limousine hire or hummer hire. Our chauffeurs have been transferring clients in our limousines for many years. In this time we have gained a good reputation for courteous and efficient limousine transportation services. A loyal following of regular customers has been the result of our conscientious approach to customer satisfaction. With their support, this has been the foundation in building a solid business, in which we take great pride. Services:"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      }, "Limousine Hire Auckland and Chauffeur Driven Services Limousine hire Auckland for all occasions, limo for hire, wedding limos, school ball limos, airport transfer, birthday limos, hens limo, Auckland limos, hummer for hire, hummer limos, limousine service, wedding car hire, luxury limos, bridle cars. Excellent Limousines aims to provide a high quality limousine services for all types of journeys. Weather is it a limousine hire or hummer hire. Our chauffeurs have been transferring clients in our limousines for many years. In this time we have gained a good reputation for courteous and efficient limousine transportation services. A loyal following of regular customers has been the result of our conscientious approach to customer satisfaction. With their support, this has been the foundation in building a solid business, in which we take great pride."), "Services:", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         "class": "row"
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         "class": "col-sm-3"
@@ -65926,10 +66066,7 @@ function (_React$Component) {
         className: "card-title"
       }, "Wedding Limo"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
         className: "card-text"
-      }, "Arrive in style on this very important day in a luxurious stretch limo. All drivers have experience with wedding events and understand the importance of your special day!."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-        href: "#",
-        className: "btn btn-primary"
-      }, "Know More")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      }, "Arrive in style on this very important day in a luxurious stretch limo. All drivers have experience with wedding events and understand the importance of your special day!.")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         "class": "col-sm-3"
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "card"
@@ -65943,10 +66080,7 @@ function (_React$Component) {
         className: "card-title"
       }, "Wedding Limo"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
         className: "card-text"
-      }, "Arrive in style on this very important day in a luxurious stretch limo. All drivers have experience with wedding events and understand the importance of your special day!."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-        href: "#",
-        className: "btn btn-primary"
-      }, "Know More")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      }, "Arrive in style on this very important day in a luxurious stretch limo. All drivers have experience with wedding events and understand the importance of your special day!.")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         "class": "col-sm-3"
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "card"
@@ -65960,10 +66094,7 @@ function (_React$Component) {
         className: "card-title"
       }, "Wedding Limo"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
         className: "card-text"
-      }, "Arrive in style on this very important day in a luxurious stretch limo. All drivers have experience with wedding events and understand the importance of your special day!."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-        href: "#",
-        className: "btn btn-primary"
-      }, "Know More")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      }, "Arrive in style on this very important day in a luxurious stretch limo. All drivers have experience with wedding events and understand the importance of your special day!.")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         "class": "col-sm-3"
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "card"
@@ -65977,78 +66108,7 @@ function (_React$Component) {
         className: "card-title"
       }, "Wedding Limo"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
         className: "card-text"
-      }, "Arrive in style on this very important day in a luxurious stretch limo. All drivers have experience with wedding events and understand the importance of your special day!."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-        href: "#",
-        className: "btn btn-primary"
-      }, "Know More")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        "class": "col-sm-3"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        className: "card"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
-        className: "card-img-top",
-        src: "https://homepages.cae.wisc.edu/~ece533/images/watch.png",
-        alt: "Card Image"
-      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        className: "card-body"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h5", {
-        className: "card-title"
-      }, "Wedding Limo"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-        className: "card-text"
-      }, "Arrive in style on this very important day in a luxurious stretch limo. All drivers have experience with wedding events and understand the importance of your special day!."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-        href: "#",
-        className: "btn btn-primary"
-      }, "Know More")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        "class": "col-sm-3"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        className: "card"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
-        className: "card-img-top",
-        src: "https://homepages.cae.wisc.edu/~ece533/images/watch.png",
-        alt: "Card Image"
-      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        className: "card-body"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h5", {
-        className: "card-title"
-      }, "Wedding Limo"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-        className: "card-text"
-      }, "Arrive in style on this very important day in a luxurious stretch limo. All drivers have experience with wedding events and understand the importance of your special day!."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-        href: "#",
-        className: "btn btn-primary"
-      }, "Know More")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        "class": "col-sm-3"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        className: "card"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
-        className: "card-img-top",
-        src: "https://homepages.cae.wisc.edu/~ece533/images/watch.png",
-        alt: "Card Image"
-      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        className: "card-body"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h5", {
-        className: "card-title"
-      }, "Wedding Limo"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-        className: "card-text"
-      }, "Arrive in style on this very important day in a luxurious stretch limo. All drivers have experience with wedding events and understand the importance of your special day!."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-        href: "#",
-        className: "btn btn-primary"
-      }, "Know More")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        "class": "col-sm-3"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        className: "card"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
-        className: "card-img-top",
-        src: "https://homepages.cae.wisc.edu/~ece533/images/watch.png",
-        alt: "Card Image"
-      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        className: "card-body"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h5", {
-        className: "card-title"
-      }, "Wedding Limo"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-        className: "card-text"
-      }, "Arrive in style on this very important day in a luxurious stretch limo. All drivers have experience with wedding events and understand the importance of your special day!."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-        href: "#",
-        className: "btn btn-primary"
-      }, "Know More"))))));
+      }, "Arrive in style on this very important day in a luxurious stretch limo. All drivers have experience with wedding events and understand the importance of your special day!."))))));
     }
   }]);
 
@@ -66281,24 +66341,30 @@ function (_React$Component) {
         "data-target": "#carouselExampleIndicators",
         "data-slide-to": "2"
       })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        "class": "carousel-inner h-50"
+        "class": "carousel-inner h-75"
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         "class": "carousel-item active"
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
         "class": "d-block w-100",
-        src: "https://homepages.cae.wisc.edu/~ece533/images/watch.png",
+        src: "http://localhost:8000/img/limo_1.png",
         alt: "First slide"
       })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         "class": "carousel-item"
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
         "class": "d-block w-100",
-        src: "https://homepages.cae.wisc.edu/~ece533/images/watch.png",
+        src: "http://localhost:8000/img/limo_3.png",
         alt: "Second slide"
       })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         "class": "carousel-item"
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
         "class": "d-block w-100",
-        src: "https://homepages.cae.wisc.edu/~ece533/images/watch.png",
+        src: "http://localhost:8000/img/limo_2.png",
+        alt: "Third slide"
+      })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        "class": "carousel-item"
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+        "class": "d-block w-100",
+        src: "http://localhost:8000/img/hummer.png",
         alt: "Third slide"
       }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
         "class": "carousel-control-prev",

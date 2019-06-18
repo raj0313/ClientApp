@@ -26,16 +26,19 @@ class ProjectsList extends React.Component {
                           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        </ol>
-                  <div class="carousel-inner h-50">
+                      </ol>
+                  <div class="carousel-inner h-75">
                         <div class="carousel-item active">
-                          <img class="d-block w-100" src="https://homepages.cae.wisc.edu/~ece533/images/watch.png" alt="First slide"/>
+                          <img class="d-block w-100" src="http://localhost:8000/img/limo_1.png" alt="First slide"/>
                         </div>
                     <div class="carousel-item">
-                      <img class="d-block w-100" src="https://homepages.cae.wisc.edu/~ece533/images/watch.png" alt="Second slide"/>
+                      <img class="d-block w-100" src="http://localhost:8000/img/limo_3.png" alt="Second slide"/>
                     </div>
                     <div class="carousel-item">
-                      <img class="d-block w-100" src="https://homepages.cae.wisc.edu/~ece533/images/watch.png" alt="Third slide"/>
+                      <img class="d-block w-100" src="http://localhost:8000/img/limo_2.png" alt="Third slide"/>
+                    </div>
+                    <div class="carousel-item">
+                      <img class="d-block w-100" src="http://localhost:8000/img/hummer.png" alt="Third slide"/>
                     </div>
                   </div>
                   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

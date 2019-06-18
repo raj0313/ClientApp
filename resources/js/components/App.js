@@ -6,23 +6,25 @@ import ProjectsList from './ProjectList';
 import NewProject from './NewProject'
 import Footer from './Footer'
 import Home from './Home'
-
+import Gallery from './Gallery'
 
 class App extends Component{
     render(){
         return(
-            <div style={{backgroundColor:"black"}}>
+           
             <BrowserRouter>
                  <Header/>
                     <Switch>
                         <Route exact path='/' component={ProjectsList}></Route>
                         <Route exact path='/create' component={NewProject}></Route>
+                        <Route exact path='/create' component={NewProject}></Route>
                    </Switch>
-                   <Home/>
+                    <Home/>
+                   <Gallery/>
                  <Footer/>
               
             </BrowserRouter>
-            </div>
+         
         )
     }
 }
